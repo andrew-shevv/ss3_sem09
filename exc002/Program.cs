@@ -3,3 +3,21 @@
 // в промежутке от M до N.
 // M = 1; N = 5 -> "1, 2, 3, 4, 5"
 // M = 4; N = 8 -> "4, 5, 6, 7, 8"
+
+void PrintAtoB(int numberA, int numberB)
+{
+    if (numberA <= numberB)
+    {
+        PrintAtoB(numberA, numberB - 1);
+        Console.Write(numberB + " ");
+    }
+    else return;
+}
+
+Console.Write("Input first(smaller) number: ");
+int numA = int.Parse(Console.ReadLine()!);
+
+Console.Write("Input second(bigger) number: ");
+int numB = int.Parse(Console.ReadLine()!);
+
+PrintAtoB(numA, numB);
