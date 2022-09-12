@@ -4,3 +4,17 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+void ListNumbersReverse(int number)
+{
+    if (number > 0)
+    {
+        Console.Write(number + " ");
+        ListNumbersReverse(number - 1);
+    }
+    else return;
+}
+
+Console.Write("Input number: ");
+int num = int.Parse(Console.ReadLine()!);
+
+ListNumbersReverse(num);
