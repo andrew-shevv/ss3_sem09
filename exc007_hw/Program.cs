@@ -17,7 +17,7 @@ int Ackermann(int firstNum, int secondNum)
     {
         return Ackermann(firstNum - 1, Ackermann(firstNum, secondNum - 1));
     }
-    else return 0;
+    else return -1;
 }
 
 const int FIRSTNUMBER = 2;
